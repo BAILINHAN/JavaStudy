@@ -28,7 +28,6 @@ public class AbstractTest {
 		//一旦Person类抽象了，就不能实例化了
 		//Person p1 = new Person();
 		
-		
 	}
 }
 

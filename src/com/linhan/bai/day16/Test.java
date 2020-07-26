@@ -11,6 +11,15 @@ public class Test extends B implements A {
 	
 	public static void main(String[] args) {
 		new Test().pX();
+		
+		Integer x = -129;//Integer»º´æÇø-128 ~ 127
+		Integer y = -129;
+		Integer x1 = 5;
+		Integer y1 = 5;
+		
+		System.out.println(x == y);
+		System.out.println(x1 == y1);
+		
 	}
 }
 
