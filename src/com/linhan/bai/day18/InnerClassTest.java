@@ -38,8 +38,6 @@ public class InnerClassTest {
 		
 		bird.sing();
 		bird.display("»Æð¿");
-		
-			
 	}
 
 }
