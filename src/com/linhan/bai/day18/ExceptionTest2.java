@@ -20,7 +20,6 @@ import java.io.IOException;
  * 		      意味着如果子类重写的方法中有异常，必须使用try-catch-finally方式处理。
  * 		3.2 执行的方法中，先后又调用了另外的几个方法，这几个方法是递进关系执行的，我们建议这几个
  * 		      方法使用throws的方式进行处理，而执行的方法a可以考虑使用try-catch-finally的方式进行处理
- * 		3.3
  * 
  * @author ZhangShengjie
  *

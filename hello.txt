@@ -1,1 +1,19 @@
 Hello,Dalian!
+
+1.final、finally、finalize三者的区别
+
+结构类似：
+throw 和 throws
+throw 表示抛出一个异常对象，生成异常对象的过程。声明在方法体内
+throws 属于异常处理的一种方式，声明在方法声明处
+
+Collection 和 Collections
+String、StringBuffer、StringBuilder
+ArrayList、LinkedList
+HashMap、LinkedHashMap
+
+结构不相似的：
+抽象类 和 接口 的区别
+重写 和 重载
+== 和 equals
+sleep() 和 wait()
