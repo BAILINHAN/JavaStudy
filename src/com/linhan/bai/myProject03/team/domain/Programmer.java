@@ -5,7 +5,7 @@ import com.linhan.bai.myProject03.team.service.Status;
 public class Programmer extends Employee {
 	
 	private int memberId;
-	private Status status;
+	private Status status = Status.FREE;
 	private Equipment equipment;
 	
 	public Programmer(int id, String name, int age, double salary, Equipment equipment) {
@@ -40,6 +40,10 @@ public class Programmer extends Employee {
 	public void setEquipment(Equipment equipment) {
 		this.equipment = equipment;
 	}
-	
 
+	@Override
+	public String toString() {
+		return getDetails() + "\t≥Ã–Ú‘±\t" + status + "\t\t\t" + equipment.getDescription(); 
+	}
+	
 }
