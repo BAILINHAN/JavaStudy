@@ -12,6 +12,16 @@ import com.linhan.bai.myProject03.team.domain.Designer;
 import com.linhan.bai.myProject03.team.domain.Employee;
 import com.linhan.bai.myProject03.team.domain.Programmer;
 
+/**
+ * @author ZhangShengjie
+ *
+ * @date 2020年8月2日下午10:41:38
+ */
+/**
+ * @author ZhangShengjie
+ *
+ * @date 2020年8月2日下午10:41:41
+ */
 public class TeamService {
 	
 	private static int counter = 1;//给memberId赋值用
@@ -113,13 +123,47 @@ public class TeamService {
 	private boolean isExist(Employee e) {
 		
 		for (int i = 0; i < total; i++) {
-			return team[i].getId() == e.getId();
+			if(team[i].getId() == e.getId()) {
+				return team[i].getId() == e.getId();
+			}
 		}
 		
 		return false;
 	}
 
-	public void removeMember(int memberId) {
+	
+	/**
+	 * 从团队当中删除成员
+	 * 
+	 * @author ZhangShengjie
+	 * @throws TeamException 
+	 *
+	 * @date 2020年8月2日下午10:41:43
+	 */
+	public void removeMember(int memberId) throws TeamException {
+		int i;
+		for ( i = 0; i < total; i++) {
+			if(team[i].getMemberId() == memberId) {
+				team[i].setStatus(Status.FREE);
+				break;
+			}
+		}
+		
+		//未找到指定memberId的情况
+		if(i == total) {
+			throw new TeamException("找不到指定memberId的员工，删除失败");
+		}
+		
+		//后一个元素覆盖前一个元素，实现删除操作
+		for (int j = i + 1; j < total; j++) {
+			team[j - 1] = team[j];
+		}
+		//写法一：
+		//team[total - 1] = null;
+		//total--;
+		
+		//写法二：
+		team[--total] = null;
 		
 	}
 	

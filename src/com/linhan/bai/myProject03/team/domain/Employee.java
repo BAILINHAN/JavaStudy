@@ -1,6 +1,6 @@
 package com.linhan.bai.myProject03.team.domain;
 
-public class Employee {
+public class Employee{
 	
 	private int id;
 	private String name;
